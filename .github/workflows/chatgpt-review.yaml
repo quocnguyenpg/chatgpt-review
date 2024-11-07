@@ -18,13 +18,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install openai @octokit/rest
 
       - name: Run ChatGPT Code Review
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPEN_AI_KEY: ${{ secrets.OPEN_AI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node .github/scripts/chatgpt_review.js
