@@ -43,7 +43,7 @@ async function reviewCodeWithChatGPT(diff) {
     messages: [
       {
         role: "user",
-        content: `Please review the following code diff and suggest any potential code refactoring, optimizations, or improvements, along with constructive feedback:\n\n${diff}`,
+        content: `Please review the following code diff and suggest any potential code refactoring, optimizations, or improvements, along with constructive feedback:\n\n${diff}\nPlease show which file and specific line need to be improve`,
       },
     ],
   });
